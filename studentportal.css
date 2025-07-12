@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #5686cd, #ffffff);
+    color: #010d18;
+}
+
+header {
+    background-color: #005792;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #f5f7f8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+     color: #e5f4f2;
+    background: #09dbd4;
+    border-radius: 4px;
+    padding: 1px 6px;
+    transition: .2s;
+}
+
+.section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.hero {
+    background: url('https://www.transparenttextures.com/patterns/white-wall.png'), #cce7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.text-box h2 {
+    font-size: 3rem;
+    color: #003f5c;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.text-box a {
+    background-color: #045084;
+    color: rgb(224, 230, 241);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.text-box a:hover {
+    background-color: #003f5c;
+}
+
+.cards .card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    width: 220px;
+    height: 150px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    background: rgba(139, 168, 247, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid #0074d9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 20px;
+}
+
+.card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    text-align: left;
+}
+
+.card-back ul {
+    padding-left: 18px;
+    font-size: 0.95rem;
+}
+
+.card-back a {
+    color: #0074d9;
+    text-decoration: underline;
+}
+
+.profile-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #005792;
+}
+
+.profile-box div {
+    max-width: 300px;
+    text-align: left;
+}
+
+.team ul {
+    list-style-type: none;
+    font-size: 1.1rem;
+    padding-top: 10px;
+    color: #005792;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1.5px solid #005792;
+    background-color: #e2eaf2;
+    font-size: 1rem;
+}
+
+.contact button {
+    background-color: #005792;
+    color: #fcfcfc;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background-color: #002244;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #003f5c;
+    color: #fff;
+}
